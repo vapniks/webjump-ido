@@ -92,7 +92,7 @@
 (defcustom webjump-ido-sites (if (featurep 'webjump-plus)
                                     (append webjump-plus-sites webjump-sample-sites)
                                   webjump-sample-sites)
-  "Hotlist for `webjump-ido'. This variable takes the same for as `webjump-sites' (which see),
+ "Hotlist for `webjump-ido'. This variable takes the same for as `webjump-sites' (which see),
 but is specific to `webjump-ido', and is customizable. By default it should contains the same
 URL's as `webjump-sample-sites' and `webjump-plus-sites' (if available)."
   :type '(alist :key-type (string :tag "Name")
@@ -112,9 +112,8 @@ URL's as `webjump-sample-sites' and `webjump-plus-sites' (if available)."
 
 ;;;###autoload
 (defun webjump-ido nil
-  "Jumps to a Web site from a programmable hotlist.
-See the documentation for the `webjump-sites' variable for how to customize the hotlist.
-Please submit bug reports and other feedback to the author, Neil W. Van Dyke <nwv@acm.org>."
+  "Jumps to a Web site from a programmable hotlist, using ido to select the website.
+See the documentation for the `webjump-ido-sites' variable for how to customize the hotlist."
   (interactive)
   (let* ((completion-ignore-case t)
          (item (assoc-string
