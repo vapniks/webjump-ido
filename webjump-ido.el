@@ -90,9 +90,10 @@
 ;;; Code:
 
 (defcustom webjump-ido-sites (if (featurep 'webjump-plus)
-                                    (append webjump-plus-sites webjump-sample-sites)
-                                  webjump-sample-sites)
- "Hotlist for `webjump-ido'. This variable takes the same for as `webjump-sites' (which see),
+				 (append webjump-plus-sites webjump-sample-sites)
+			       webjump-sample-sites)
+  "Hotlist for `webjump-ido'. 
+This variable takes the same form as `webjump-sites' (which see),
 but is specific to `webjump-ido', and is customizable. By default it should contains the same
 URL's as `webjump-sample-sites' and `webjump-plus-sites' (if available)."
   :type '(alist :key-type (string :tag "Name")
